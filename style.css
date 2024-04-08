@@ -1,10 +1,10 @@
 :root {
-    font-size: 16px;
+    font-size: 20px;
     --blue: #3962B2;
     --orange: #5BAFA0;
     --textColor: #E4EAF9;
     --black: #5E89FF;
-
+    --medblue: #4DADCC;
 }
 
 * {
@@ -21,30 +21,41 @@ body {
     background-color: var(--black);
     color: var(--textColor);
     font-family: 'Asap Condensed', sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(#5E89FF, #324882);
 }
 
+
+
+
+
 a {
-    font-size: medium;
+    font-size: x-large;
     text-decoration: none;
     color: var(--textColor)
 }
 
 img {
-    width: 110%;
+    width: 100%;
 }
 
 .concessions img{
     height: 700px;
     object-fit: cover;
 }
+h1 {
+    color: var(--textColor);
+    font-size: 4.5rem;
+   
+}
 
 h2 {
-    font-size: 3.8rem;
+    font-size: 3rem;
     margin-bottom: 2rem;
 }
 
 h3 {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
 }
 
 h4 {
@@ -52,7 +63,8 @@ h4 {
 }
 
 p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
+    font-size: 30px;
 }
 
 
@@ -66,13 +78,22 @@ p {
     display: inline-block;
 }
 
+.btn.alt{
+    background-color: var(--medblue);
+    color: var(--textColor);
+}
+
     .btn:hover {
         background-color: #FFAB68;
         transition: 1s;
         transform: scale(2.2s);
     }
+.twobtn {
+    color: var(--medblue);
+}
 
 nav {
+    z-index: 100;
     width: calc(100% - 200px);
     background-color: var(--blue);
     padding: 10px 100px;
@@ -122,19 +143,35 @@ nav li:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 500px;
+    
     
 }
 
 /*Hero Image */
+
+#aboutImage {
+    height: 80vh;
+    background-image: url(assets/gamemuseum.png);
+    background-size: cover;
+    background-position: bottom;
+   
+   
+    
+    padding: 0px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
 #heroImage {
     height: 80vh;
     background-image: url(assets/hero.jpg);
     background-size: cover;
     background-position: bottom;
-    color: var(--textColor);
-    margin-block: 120px 160px;
+   
+   
+    margin-block: 0px 160px;
     padding: 0px 100px;
     display: flex;
     align-items: center;
@@ -157,12 +194,14 @@ nav li:hover {
         font-size: 1.6775rem;
         font-weight: bold;
         margin-bottom: 4rem;
+        opacity: 1;
     }
+
 
 .two-col {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 4fr 2fr;
+    gap: 10rem;
     margin-block: 160px;
 }
 
@@ -213,7 +252,7 @@ nav li:hover {
 }
 
 #app {
-    display: grid;
+    
     grid-template-columns: 1fr 1fr;
 }
 
@@ -296,12 +335,35 @@ nav li:hover {
 }
 
 .sm-icon {
-    width: 32px;
+    font-size: 20px;
     height: 32px;
     background-size: contain;
     background-repeat: no-repeat;
-    padding-right: .5rem;
+    
     display: inline-block;
+}
+
+.nerds{
+    margin: 90px -100px 00px;
+    padding: 20px 100px;
+    background: rgb(37,29,176);
+    background: linear-gradient(0deg, rgba(37,29,176,1) 49%, rgba(229,251,255,0) 100%);
+    text-align: centers;
+    
+}
+
+#contact{
+    margin: 90px -100px 00px;
+    padding: 20px 100px;
+    background: #B6C0DB;
+    text-align: centers;
+    color: #212839 !important;
+}
+
+
+
+.contactform a{
+    color: #15398c !important;
 }
 
 #contact a {
@@ -317,10 +379,11 @@ nav li:hover {
 }
 
 input, textarea {
+    font-family: arial;
     width: 100%;
     padding: .5rem;
     margin: 1rem 0px;
-    border: solid 2px var(--textColor);
+   
     border-radius: 5px;
     font-size: 1rem;
 }
@@ -329,7 +392,8 @@ input, textarea {
         outline: var(--blue) solid 2px;
     }
     input[type=submit] {
-        width: min-content;
+
+        width: 100%;
         border: none;
     }
 
@@ -442,10 +506,196 @@ script {
     display: none;
 }
 
-.three-col{
+.three-col {
+    font-size: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    margin-block: 160px;
+    gap: 1rem;
+    margin-block: 100px;
+}
 
+.four-col {
+    font-size: 30px;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    width: 100%;
+}
+
+
+
+.museum-content{
+    font-size: 20px;
+}
+
+.location {
+    width: 70%;
+}
+.tickies {
+    background: #B6C0DB;
+    display: flex;
+    /* gap: 2rem; */
+    font-size: 1.6875rem;
+    font-weight: bold;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+.tickies a{
+    color: rgb(33, 39, 62);
+}
+
+.multi-button {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.sqs-edit-mode-active .fluid-engine & .sqs-block-button-container {
+    width: unset;
+}
+
+.whowearetext {
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    justify-content: center;
+}
+
+.muchmore {
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+
+#exhibitions div {border: solid 1px white;padding: 8px;border-radius: 10px;}
+
+#exhibitions h3 {
+    text-align: center;
+    background-color: #3962B2;
+    padding: 10px;
+}
+
+h4.events {
+    text-align: center;
+    padding: 10px;
+}
+
+#exhibitions img {
+    height: 250px;
+    object-fit: cover;
+}
+
+#exhibitions p {
+    font-size: 23px;
+}
+
+.event {
+    margin: 90px -100px 100px;
+    padding: 20px;
+    background: rgb(5,19,55);
+    background: linear-gradient(0deg, rgb(46 89 199) 0%, rgba(71, 117, 237, 1) 54%);
+    text-align: center;
+}
+
+.tickies ul {
+    background-color: #B6C0DB;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    font-weight: bold;
+    border-bottom: solid 3px var(--white);
+    transition: .5s;
+    width: 100%;
+}
+
+.admissions > div {
+background-color: #9aaee3;
+}
+
+.tickies .btn {
+    margin: auto;
+}
+
+.bottomtext{
+    background: rgb(128,157,231);
+    background: linear-gradient(0deg, rgba(128,157,231,1) 0%, rgba(199,214,255,1) 55%);
+    margin: 0px -100px 100px;
+    padding: 20px;
+
+}
+
+.bottomtext p {
+    color: #15398c;
+}
+.team{
+    color:#324882;
+}
+.joinourteam{
+    margin: 90px -100px 00px;
+    padding: 20px;
+    background: rgb(5, 19, 55);
+    background: linear-gradient(0deg, rgb(46 89 199) 0%, rgba(71, 117, 237, 1) 54%);
+    text-align: center
+}
+
+.hero{
+
+    height: 80vh;
+    background-image: url(assets/hero.jpg);
+    background-size: cover;
+    background-position: bottom;
+    padding: 0px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.team > div {
+    background-color: #B6C0DB;
+    padding: 50px;
+}
+
+
+#exhibitions1 div {border: solid 1px rgb(112, 255, 129);padding: 8px;border-radius: 10px;}
+
+#exhibitions1 h3 {
+    text-align: center;
+    background-color: #e2ad4c;
+    padding: 10px;
+}
+#exhibitions2 h3 {
+    text-align: center;
+    background-color: #60c296;
+    padding: 10px;
+}
+#exhibitions3 h3 {
+    text-align: center;
+    background-color: #387b8d;
+    padding: 10px;
+}
+
+#exhibitions1 img {
+    height: 250px;
+    object-fit: cover;
+}
+
+#exhibitions1 p {
+    font-size: 23px;
+}
+
+#listexhibits img{
+    border: solid 1px rgb(54, 255, 155); 
+    padding: 8px; 
+    border-radius: 10px;
+    background-color: #3962B2;
+    padding: 10px;
 }
