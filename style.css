@@ -44,7 +44,7 @@ img {
     object-fit: cover;
 }
 h1 {
-    color: var(--textColor);
+    color: white;
     font-size: 4.5rem;
    
 }
@@ -55,7 +55,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
 
 h4 {
@@ -95,12 +95,11 @@ p {
 nav {
     z-index: 100;
     width: calc(100% - 200px);
-    background-color: var(--blue);
+    background-color: #2f67e9;
     padding: 10px 100px;
-    box-shadow: 0px 2px 13px 0px #000000;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     position: fixed;
     top: 0px;
 }
@@ -200,9 +199,11 @@ nav li:hover {
 
 .two-col {
     display: grid;
-    grid-template-columns: 4fr 2fr;
-    gap: 10rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
     margin-block: 160px;
+    width: 100%;
+    
 }
 
 .cards {
@@ -347,8 +348,9 @@ nav li:hover {
     margin: 90px -100px 00px;
     padding: 20px 100px;
     background: rgb(37,29,176);
-    background: linear-gradient(0deg, rgba(37,29,176,1) 49%, rgba(229,251,255,0) 100%);
+    background: linear-gradient(0deg, rgb(19 47 121) 49%, rgba(229, 251, 255, 0) 100%);
     text-align: centers;
+    margin-bottom: 75px;
     
 }
 
@@ -510,7 +512,7 @@ script {
     font-size: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 3rem;
     margin-block: 100px;
 }
 
@@ -539,6 +541,7 @@ script {
     font-weight: bold;
     flex-wrap: wrap;
     padding-bottom: 50px;
+    margin-bottom: 75px;
 }
 
 .tickies a{
@@ -571,10 +574,16 @@ script {
     gap: 20px;
     padding: 20px;
     justify-content: center;
+    margin-bottom: 75px;
+    
 }
 
 
-#exhibitions div {border: solid 1px white;padding: 8px;border-radius: 10px;}
+#exhibitions div {
+    border: solid 1px white;
+    padding: 8px;
+    border-radius: 10px;
+}
 
 #exhibitions h3 {
     text-align: center;
@@ -624,18 +633,20 @@ background-color: #9aaee3;
 }
 
 .bottomtext{
-    background: rgb(128,157,231);
-    background: linear-gradient(0deg, rgba(128,157,231,1) 0%, rgba(199,214,255,1) 55%);
-    margin: 0px -100px 100px;
-    padding: 20px;
-
+    background: rgb(5,19,55);
+    background: linear-gradient(0deg, rgba(5,19,55,1) -100%, rgba(71,117,237,1) 52%);
+        padding: 50px;
+        max-width: 80%;
+        margin: auto;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
 }
 
 .bottomtext p {
-    color: #15398c;
+    color: #ffffff;
 }
 .team{
-    color:#324882;
+    color:#ffffff;
 }
 .joinourteam{
     margin: 90px -100px 00px;
@@ -660,8 +671,14 @@ background-color: #9aaee3;
 }
 
 .team > div {
-    background-color: #B6C0DB;
+    background: rgb(5,19,55);
+background: linear-gradient(0deg, rgba(5,19,55,1) -100%, rgba(71,117,237,1) 52%);
     padding: 50px;
+    max-width: 80%;
+    margin: auto;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-bottom: 50px;
 }
 
 
@@ -669,17 +686,17 @@ background-color: #9aaee3;
 
 #exhibitions1 h3 {
     text-align: center;
-    background-color: #e2ad4c;
+    background-color: #d18126;
     padding: 10px;
 }
 #exhibitions2 h3 {
     text-align: center;
-    background-color: #60c296;
+    background-color: #4ab283;
     padding: 10px;
 }
 #exhibitions3 h3 {
     text-align: center;
-    background-color: #387b8d;
+    background-color: #45889b;
     padding: 10px;
 }
 
@@ -698,4 +715,61 @@ background-color: #9aaee3;
     border-radius: 10px;
     background-color: #3962B2;
     padding: 10px;
+}
+
+.admissions {
+    max-width: 80%;
+    margin: 0px auto 75px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.ticketType, .ticketnumbers {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ticketType {
+    border-bottom: solid 1px white;
+}
+
+.ticketBox {
+    width: 100%;
+    margin: 2rem auto;
+    padding: 1rem;
+    border:solid 1px white;
+}
+
+.ticketnumbers {
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.ticketnumbers div {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+    font-weight: bold;
+}
+
+.ticketnumbers div input {
+    max-width: 40px;
+}
+
+.ticketnumbers p {
+    margin-top: 20px;
+}
+
+#exhibitions.homepage div{
+    width: 30%;
+}
+
+.careers li{
+    display: list-item;
+    text-decoration: underline;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: normal;
+
 }
