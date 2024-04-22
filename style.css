@@ -102,6 +102,7 @@ nav {
     align-items: left;
     position: fixed;
     top: 0px;
+    gap: 50px;
 }
 
 nav#mobileMenu {
@@ -529,7 +530,7 @@ script {
 }
 
 .location {
-    width: 70%;
+    width: 100%;
 }
 .tickies {
     background: #B6C0DB;
@@ -781,4 +782,55 @@ background: linear-gradient(0deg, rgba(5,19,55,1) -100%, rgba(71,117,237,1) 52%)
 
 iframe{
  width: 100%;   
+}
+
+#mobile {
+    width: calc(100% - 20px - 20px );
+    padding: 10px 20px;
+    display: none;
+}
+
+@media screen and (max-width: 930px) {
+    #desktop {
+        display: none;
+    }
+    #mobile {
+        display: flex;
+    }
+
+}
+
+nav#mobile img{
+    height: 40px;
+
+}
+
+.hamburger {
+    margin-top: 10px;
+}
+
+.overlay  {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #2f67e9;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    display: none;
+}
+
+.overlay * {
+   font-size: x-large;
+   padding: 10px;
+    text-align: center;
+}
+
+.active div:first-of-type {
+    transform: rotate(45deg) translateX(10px);
+}
+
+.active div:nth-of-type(2) {
+    transform: rotate(-45deg) translateX(10px);
 }

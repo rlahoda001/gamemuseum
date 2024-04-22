@@ -23,6 +23,33 @@
         </div>
     </nav>
 
+    <nav id="mobile">
+        <a href="index.html"><img src="assets/logo.png" alt="Main Image"></a>
+        <div class="hamburger">
+            <div>
+
+            </div>
+            <div>
+                
+            </div>
+
+        </div>
+    </nav>
+
+
+     <div class="overlay">
+        <div>
+        <ul>
+            <li><a href="AboutUs.html">About</a></li>
+            <li><a href="exhibitions.html">Exhibitions</a></li>
+            <li><a href="Jobs.html">Opportunities</a></li>
+        </ul>
+        <a class="btn" href="Tickets.html">tickets</a>
+    </div>
+
+
+    </div>
+
     <!--Hero Image-->
 
     <div class="content">
@@ -192,6 +219,29 @@
         </div>
     </div>
     </div>
+    <script>
+        var track = 0;
+        console.log(track);
+        $(document).ready(function(){
+        
+          $(".hamburger").click(function(){
+            console.log("click");
+            $(".hamburger").addClass("active");
+          if(track == 0) {
+            $(".overlay").show();
+            track = 1;
+            console.log("on");
+            console.log(track);
+            } else {
+                $(".hamburger").removeClass("active");
+                $(".overlay").hide();
+                console.log("off");
+                track = 0;
+            }
+          });
+
+        });
+    </script>
 
 </body>
 </html>
