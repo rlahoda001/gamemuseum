@@ -788,6 +788,7 @@ iframe{
     width: calc(100% - 20px - 20px );
     padding: 10px 20px;
     display: none;
+    
 }
 
 @media screen and (max-width: 1200px) {
@@ -801,7 +802,8 @@ iframe{
 }
 
 nav#mobile img{
-    height: 40px;
+    height: 100%;
+    width: 200px;
 
 }
 
@@ -822,8 +824,8 @@ nav#mobile img{
 }
 
 .overlay * {
-   font-size: x-large;
-   padding: 10px;
+    font-size: 3rem !important;
+    padding: 10px;
     text-align: center;
 }
 
